@@ -1,6 +1,6 @@
 public class MathEx {  
     public static void main(String [] args){
-         int y= swap(346);
+        int y= swap(346);
         System.out.println(y);
         int x= swap (785);
         System.out.println(x);
