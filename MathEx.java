@@ -8,8 +8,9 @@ public class MathEx {
         System.out.println(w);
         timeLeft(3,53,8,47);
         timeLeft(2,24,7,58);
-        dayOfWeek(6,23);
-        dayOfWeek(3,17);
+        System.out.println(dayOfWeek(6,23));
+        System.out.println(dayOfWeek(3,17));
+        System.out.println(dayOfWeek(4,29));
        
     }
     public static int swap(int z){
@@ -22,14 +23,13 @@ public class MathEx {
         int z = x%60;
         System.out.println( y+" hours "+ z+ " minutes");
     }    
-    public static void dayOfWeek(int day, int date){
+    public static int dayOfWeek(int day, int date){
             int x= (date%7);
-            int y= ((day+x)+7)-1;
-            System.out.println(y);
+            int y= ((day+x))-1;
+            int z= (y+7)%7;
+            return z;
     }
-
-
-    }
+}
 
         
     
