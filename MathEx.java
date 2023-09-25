@@ -17,15 +17,16 @@ public class MathEx {
         return newDigits;
     }
     public static void timeLeft(int curHour, int curMin, int depHour, int depMin){
-        int timeDif = ((depHour*60)+depMin) - ((curHour*60)+curMin);
+        int totalDepMinutes = ((depHour*60)+depMin);
+        int totalCurMinutes = ((curHour*60)+curMin);
+        int timeDif = totalDepMinutes - totalCurMinutes;
         int hours = timeDif/60;
         int minutes = timeDif%60;
         System.out.println( hours+" hour(s) "+ minutes+ " minute(s)");
     }    
     public static int dayOfWeek(int day, int date){
-            int partOfWeek= (date%7);
-            int startOfMonth= ((day+partOfWeek))-1;
-            int dayOfTheWeek= (startOfMonth+7)%7;
+            int partOfWeek= (date+day)-1;
+            int dayOfTheWeek= partOfWeek%7;
             return dayOfTheWeek;
     }
 }
