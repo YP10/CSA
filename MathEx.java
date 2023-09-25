@@ -1,42 +1,31 @@
 public class MathEx {  
     public static void main(String [] args){
-        int y= swap(346);
-        System.out.println(y);
-        int x= swap (785);
-        System.out.println(x);
-        int w = swap(216);
-        System.out.println(w);
+        System.out.println(swap(482));
+        System.out.println(swap(860));
+        System.out.println(swap(234));
         timeLeft(3,53,8,47);
         timeLeft(2,24,7,58);
         System.out.println(dayOfWeek(6,23));
         System.out.println(dayOfWeek(3,17));
         System.out.println(dayOfWeek(4,29));
-       
     }
-    public static int swap(int z){
-        int result = z/100*100+z%10*10+z%100/10;
-        return result;
+    public static int swap(int curDigits){
+        int hundreds = curDigits/100*100;
+        int tens = curDigits%10*10;
+        int ones = curDigits%100/10;
+        int newDigits = hundreds + tens + ones;
+        return newDigits;
     }
     public static void timeLeft(int curHour, int curMin, int depHour, int depMin){
-        int x = (depHour*60+depMin)- (curHour*60+curMin);
-        int y = x/60;
-        int z = x%60;
-        System.out.println( y+" hours "+ z+ " minutes");
+        int timeDif = ((depHour*60)+depMin) - ((curHour*60)+curMin);
+        int hours = timeDif/60;
+        int minutes = timeDif%60;
+        System.out.println( hours+" hour(s) "+ minutes+ " minute(s)");
     }    
     public static int dayOfWeek(int day, int date){
-            int x= (date%7);
-            int y= ((day+x))-1;
-            int z= (y+7)%7;
-            return z;
+            int partOfWeek= (date%7);
+            int startOfMonth= ((day+partOfWeek))-1;
+            int dayOfTheWeek= (startOfMonth+7)%7;
+            return dayOfTheWeek;
     }
 }
-
-        
-    
-
-
-
-
-
-
-
