@@ -5,9 +5,8 @@ public class MathEx {
         System.out.println(swap(234));
         timeLeft(3,53,8,47);
         timeLeft(2,24,7,58);
-        System.out.println(dayOfWeek(6,23));
+        System.out.println(dayOfWeek(2,23));
         System.out.println(dayOfWeek(3,17));
-        System.out.println(dayOfWeek(4,29));
     }
     public static int swap(int curDigits){
         int hundreds = curDigits/100*100;
