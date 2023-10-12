@@ -26,6 +26,13 @@ public class Poll extends JFrame
     w.setBounds(300, 300, 400, 400);
     w.setDefaultCloseOperation(EXIT_ON_CLOSE);
     w.setVisible(true);
+   
+    PollDisplayPanel votingMachine=
+                    new PollDisplayPanel ("Tami", "Brian", "Liz");
+    votingMachine.vote1();
+    votingMachine.vote2();
+    votingMachine.vote3();
+    System.out.println(votingMachine);
   }
 }
 
