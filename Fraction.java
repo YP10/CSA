@@ -40,7 +40,7 @@ public class Fraction {
 		return new Fraction(n,d);
 	}
 	public String toString(){
-		return numerator + "/" + denominator;
+	return numerator + "/" + denominator;
 	}
 	public Fraction reciprocal(){
 		int n= denominator;
