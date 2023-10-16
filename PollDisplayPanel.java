@@ -81,14 +81,21 @@ public class PollDisplayPanel extends JPanel
 
     if (total > 0)
     {
-      int degrees;
+      int redDegrees;
       g.setColor(Color.RED);
-      degrees = countToDegrees(count1, total);
-      drawSector(g, x, y, r, fromDegree, degrees);
+      redDegrees = countToDegrees(count1, total);
+      drawSector(g, x, y, r, fromDegree, redDegrees);
 
-      //_________________________________________________
+      int degrees0 = fromDegree+redDegrees;
+      int greenDegrees;
+      g.setColor(Color.GREEN);
+      greenDegrees = countToDegrees(count2,total);
+      drawSector(g,x,y,r,degrees0,greenDegrees);
 
-      //...
+      int blueDegrees;
+      g.setColor(Color.BLUE);
+      blueDegrees= Math.max(360 - fromDegree, 0);
+      drawSector(g,x,y,r,fromDegree,blueDegrees);
     }
     else
     {
@@ -122,7 +129,7 @@ public class PollDisplayPanel extends JPanel
   // Returns the number of degrees in a pie slice that
   // corresponds to count / total, rounded to the nearest integer.
   private int countToDegrees(int count, int total){
-    double angle= ((double)count/total)*360;
+    double angle= ((double)count/total)*360+.5;
     return (int)angle;
   }
 
