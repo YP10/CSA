@@ -49,8 +49,7 @@ public class PollDisplayPanel extends JPanel
   public String toString()
   {
     return name1+":"+count1+ name2+":"+count2+name3+":"+count3;
-  }
-
+  }    
   // Redefines JPanel's paintComponent to draw this pie chart
   public void paintComponent(Graphics g)
   {
@@ -104,12 +103,9 @@ public class PollDisplayPanel extends JPanel
     // Display the counts:
     y += (r + 20);
     g.setColor(Color.BLACK);
-
-    //g.drawString( _______________ , x - r, y);
-
-    //g.drawString( _______________ , x, y);
-
-    //g.drawString( _______________ , x + r, y);
+    g.drawString(name1+":"+count1, x-r,y);
+    g.drawString(name2+":"+count2,x,y);
+    g.drawString(name3+":"+count3, x+r,y);
 
 
     // Display the color squares:
@@ -125,10 +121,9 @@ public class PollDisplayPanel extends JPanel
 
   // Returns the number of degrees in a pie slice that
   // corresponds to count / total, rounded to the nearest integer.
-  private int countToDegrees(int count, int total)
-  {
-
-    return 0;
+  private int countToDegrees(int count, int total){
+    double angle= ((double)count/total)*360;
+    return (int)angle;
   }
 
 
