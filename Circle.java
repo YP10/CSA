@@ -1,8 +1,8 @@
 public class Circle {
     private double radius;
 
-    public Circle(double r){
-        radius= r;
+    public Circle(double radius){
+        this.radius= radius;
     }
     public double Circumference(){
         double Circum = Math.PI*2*radius;
