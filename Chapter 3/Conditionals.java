@@ -35,14 +35,17 @@ public class Conditionals {
         int closestX= 21-x;
         int closestY= 21-y;
         if(x>21&&y>21) return 0;
-        if(y>21)return x;
-        if(closestY>closestX)return x;
+        if(closestY>closestX){
+            if(closestX<0)return y;
+            else return x;
+        }
+       if(closestY<0)return x;
         else return y;
     }
 
-
     public static void main(String[] args){
         Conditionals c= new Conditionals();
+        
         System.out.println("Chimp Trouble");
         System.out.println(c.chimpTrouble(true, true));
         System.out.println(c.chimpTrouble (false, false));
