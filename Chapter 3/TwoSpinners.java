@@ -28,11 +28,10 @@ public class TwoSpinners {
                 else System.out.println("Tie. 0 points");
         }                                                                                           
     }
- 
-    
+
     public static void main(String[] args) {
         TwoSpinners ds = new TwoSpinners();
-            for(int i = 0; i < 10; i++){    //This will save you time by running playground 10 times
+            for(int i = 0; i < 10; i++){    
               ds.playRound();
             }
     }
