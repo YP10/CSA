@@ -16,9 +16,9 @@ public class CrapsGame{
         if(point==0){
             if(total==7||total==11){
                 point=0;
-                result=1;
+                result= 1;
             } 
-            if(total ==2|| total==3|| total==12){
+            else if(total ==2|| total==3|| total==12){
                 point=0;
                 result=-1;
             }
@@ -27,19 +27,15 @@ public class CrapsGame{
                 result=0;
             }  
         }
-        if(point!=0){
+        else if(point!=0){
             if(total==point){
                 point =0;
                 result =1;
             }
-            if(total!=point){
-                result=0;
-            }
-            if(total==7){
+            else if(total==7){
                 point =0;
                 result=-1;
-            }
-
+            } 
         }
         return result; 
         
