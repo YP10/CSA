@@ -42,10 +42,51 @@ public class Conditionals {
        if(closestY<0)return x;
         else return y;
     }
+    public void practice(int temp){
+        String weather;
 
+
+if (temp >= 51)
+
+{
+
+weather = "moderate";
+
+}
+
+else
+
+{
+
+weather = "warm";
+
+}
+if (temp <= 31)
+
+{
+
+weather = "cold";
+
+}
+
+else
+
+{
+
+weather = "cool";
+
+}
+
+
+System.out.print(weather);
+    }
     public static void main(String[] args){
         Conditionals c= new Conditionals();
         
+        c.practice(31);
+        c.practice(51);
+        c.practice(73);
+
         System.out.println("Chimp Trouble");
         System.out.println(c.chimpTrouble(true, true));
         System.out.println(c.chimpTrouble (false, false));
