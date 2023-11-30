@@ -24,6 +24,11 @@ public class Practice {
         else return false;
 
     }
+    public int idk(int m, int n){
+        if(m+n>10) return m+n;
+        if(m-n>0) return m-n;
+        else return 0;
+    }
     public static void main(String [] args){
         Practice l= new Practice();
 
@@ -41,6 +46,9 @@ public class Practice {
         System.out.println(l.evenlySpaced(4,6,2));
         System.out.println(l.evenlySpaced(4,6,3));
         System.out.println(l.evenlySpaced(3,7,11));
+        System.out.println(" ");
+
+        System.out.println(l.idk(8,3));
 
 
 

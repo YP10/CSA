@@ -28,13 +28,21 @@ public class MoreConditionals {
     }
 
     public boolean makeBenches(int small, int big, int goal){
-        if(5*big+1*small>=goal)return true;
+        int smallFeet=small*1;
+        int bigFeet=big*5;
+        int x=goal-small;
+        if(goal-bigFeet>0){
+            if(small>=goal-bigFeet) return true;
+        }
+        else if(goal-bigFeet<0){
+            if(x/5==0)return true;
+        }       
+        if(bigFeet+smallFeet==goal) return true;
+        if(smallFeet==goal)return true;
+        if(bigFeet==goal)return true;
         else return false;
     }
-     
-   
-   
-
+    
 
     public static void main(String [] args){
         MoreConditionals mc= new MoreConditionals();
