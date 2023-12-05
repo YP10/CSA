@@ -31,9 +31,11 @@ public class WhileLoops{
         int x=0;
         while(n>x){
             x++;
-            sum+=x;
+            
             if(x==n) System.out.print(x+" ");
             else System.out.print(x+" "+"+"+" ");
+
+            sum+=x;
         }
         System.out.println("="+" " + sum);
     }
