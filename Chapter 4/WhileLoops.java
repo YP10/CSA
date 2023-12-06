@@ -39,6 +39,16 @@ public class WhileLoops{
         }
         System.out.println("="+" " + sum);
     }
+    public boolean isPerfectSquare(int n){
+        int sum=0;
+        int i=1;
+        while(n>sum){
+            sum+=i;
+            i+=2;
+        }
+        if(sum==n) return true;
+        else return false;
+    }
     public static void main(String [] args){
         WhileLoops w= new WhileLoops();
        
@@ -63,7 +73,11 @@ public class WhileLoops{
         w.printSum(6);
         w.printSum(8);
         w.printSum(10);
+        System.out.println(" ");
+
+        System.out.println("Is Pefect Square");
+        System.out.println(w.isPerfectSquare(25));
+        System.out.println(w.isPerfectSquare(23));
+        System.out.println(w.isPerfectSquare(49));
     }
-    
-    
 }
