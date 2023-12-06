@@ -1,3 +1,4 @@
+package Craps;
 public class Die {
         int getNumDots0;
     public void roll(){

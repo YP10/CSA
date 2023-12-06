@@ -72,12 +72,13 @@ public class WhileLoops{
         System.out.println("Print Sum");
         w.printSum(6);
         w.printSum(8);
-        w.printSum(10);
+        w.printSum(12);
         System.out.println(" ");
 
         System.out.println("Is Pefect Square");
         System.out.println(w.isPerfectSquare(25));
-        System.out.println(w.isPerfectSquare(23));
         System.out.println(w.isPerfectSquare(49));
+        System.out.println(w.isPerfectSquare(37));
+        System.out.println(w.isPerfectSquare(43));
     }
 }

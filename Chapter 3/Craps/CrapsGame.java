@@ -1,3 +1,4 @@
+package Craps;
 // Implements the game of Craps logic
 
 public class CrapsGame{

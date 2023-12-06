@@ -1,3 +1,4 @@
+package Craps;
 // Represents the craps table with two rolling dice
 
 import java.awt.*;

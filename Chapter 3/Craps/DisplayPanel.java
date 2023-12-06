@@ -1,3 +1,4 @@
+package Craps;
 // Represents a display panel for a Craps table
 
 import java.awt.*;
