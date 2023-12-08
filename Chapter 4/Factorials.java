@@ -43,11 +43,9 @@ public class Factorials {
         System.out.println("Test");
         System.out.printf("e is %2.3f \n", f.calcE());
        
-        for(int a=1,a<=5,a++){}
-       
-       
-        System.out.println(" ");
-        System.out.printf("e is %2.3f \n",f.calcEX(2));
+        for(int a=1;a<=5;a++){
+            System.out.printf("e is %2.3f \n", f.calcEX(a));
+        }
         
     }
 
