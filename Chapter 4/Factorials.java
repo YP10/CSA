@@ -34,15 +34,18 @@ public class Factorials {
     }
     public static void main(String [] args){
         Factorials f= new Factorials();
-
+        
+        System.out.println("Factorials up to 20");
         for(int b=1;b<=20;b++){
             System.out.println(f.calcFactorial(b));
-            
         }
         System.out.println(" ");
-        System.out.println("Test");
+
+        System.out.println("Calc E");
         System.out.printf("e is %2.3f \n", f.calcE());
-       
+        System.out.println(" ");
+
+        System.out.println("Calc Ex");
         for(int a=1;a<=5;a++){
             System.out.printf("e is %2.3f \n", f.calcEX(a));
         }
