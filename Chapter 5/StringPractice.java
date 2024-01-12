@@ -60,12 +60,19 @@ public class StringPractice {
         int a=prefix.length();
         int d=s.length();
         if(d<a) return false;
-        String b=s.substring(0,a+1);
-        int c=b.compareTo(prefix);
-        if(c==0) return true;
+        String b=s.substring(0,a);
+        if(b.equals(prefix)) return true;
         else return false;
     }
-      
+    
+    public static boolean endsWith(String s,String suffix){
+        int a=suffix.length();
+        int d=s.length();
+        if(a>d) return false;
+        String b=s.substring(d-a);
+        if(b.equals(suffix)) return true;
+        else return false;
+    }
     public static void main(String []args){
         System.out.println(scroll("Hello World"));
         System.out.println(scroll("happy"));
@@ -87,6 +94,11 @@ public class StringPractice {
         System.out.println(startsWith("arch", "architecture"));
         System.out.println(startsWith("architecture", "rch"));
         System.out.println(startsWith("architecture", "architecture"));
-      
+        System.out.println();
+        System.out.println(endsWith("astronomy", "nomy"));
+        System.out.println(endsWith("astronomy", "y"));
+        System.out.println(endsWith("astronomy", "nom"));
+        System.out.println(endsWith("nomy", "astronomy"));
+        System.out.println(endsWith("astronomy", "astronomy"));
     }
 }
