@@ -56,7 +56,16 @@ public class StringPractice {
 
     }
 
-
+    public static boolean startsWith(String s, String prefix){
+        int a=prefix.length();
+        int d=s.length();
+        if(d<a) return false;
+        String b=s.substring(0,a+1);
+        int c=b.compareTo(prefix);
+        if(c==0) return true;
+        else return false;
+    }
+      
     public static void main(String []args){
         System.out.println(scroll("Hello World"));
         System.out.println(scroll("happy"));
@@ -73,6 +82,11 @@ public class StringPractice {
         
         System.out.println("4/2/2014 becomes " + convertDate2("4/2/2014"));
 
+        System.out.println(startsWith("architecture", "arch"));
+        System.out.println(startsWith("architecture", "a"));
+        System.out.println(startsWith("arch", "architecture"));
+        System.out.println(startsWith("architecture", "rch"));
+        System.out.println(startsWith("architecture", "architecture"));
       
     }
 }
