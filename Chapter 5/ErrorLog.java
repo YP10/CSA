@@ -14,11 +14,18 @@ public class ErrorLog {
          * contains keyword; false otherwise.
          * Postcondition: the description is unchanged
          */
-        public boolean containsKey(String keyword) {
+        public boolean containsKey(String keyword){
             int a=description.indexOf(keyword);
-            
-            /* part b */
-            return false;   // replace this
+            int b=keyword.length();
+            int c=description.length();
+            if(a==0) return true;
+            else if(a>0){
+                String s=description.substring(a-1,a+b+1);
+                String s1=s.trim();
+                if(s1.length()-s.length()==2) return true;
+                else if(a+b==c&&s1.length()+1==s.length()) return true;
+            }
+            else return false;
         }
         
         public String getMachineId() { return machineId;}
