@@ -18,14 +18,20 @@ public class ErrorLog {
             int a=description.indexOf(keyword);
             int b=keyword.length();
             int c=description.length();
+            if(a==-1) return false;
             if(a==0) return true;
+            
+            if(a+b==c){
+                String t=description.substring(a-1);
+                String t1=t.trim();
+                if(t1.length()+1==t.length()) return true;
+            }
             else if(a>0){
                 String s=description.substring(a-1,a+b+1);
                 String s1=s.trim();
-                if(s1.length()-s.length()==2) return true;
-                else if(a+b==c&&s1.length()+1==s.length()) return true;
+                if(s1.length()+2==s.length()) return true;
             }
-            else return false;
+            return false;
         }
         
         public String getMachineId() { return machineId;}
