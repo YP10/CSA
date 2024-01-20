@@ -20,8 +20,14 @@ public class Sentence {
 	 * Postcondition: the current sentence if not modified.
 	 */
 	public int findNthTime(String str, int n) {
-		/* part a */
-		return -1;  //replace this
+		int a=0;
+		for(int i=0;i<n;i++){
+			int b=a;
+			if(i==0) a=currSent.indexOf(str);
+			else a=currSent.indexOf(str,b+str.length());
+			if(a==-1) return -1;
+		}
+		return a;
 	}
 
 	/** Modifies the current sentence by replacing the nth occurrence of str with repl
@@ -30,7 +36,8 @@ public class Sentence {
 	 *
 	 */
 	public void replaceNthTime(String str, int n, String repl) {
-		/*  part b - you must call findNthTime here */
+		int a=findNthTime(str, n);
+		if(a!=-1) currSent=currSent.substring(0,a)+repl+currSent.substring(a+str.length());
 	}
 
 	/** Returns the index of the last occurrence of str in the current sentence:
@@ -39,8 +46,15 @@ public class Sentence {
 	 * Postcondition: the current sentence is not modified.
 	 */
 	public int findLastTime(String str) {
-		/* part c - you must call findNthTime here */
-		return -1;  // replace this
+		int a=1;
+		int counter=1;
+		while(a!=-1){
+			a=findNthTime(str,counter);
+			if(counter==1&&a==-1) return -1;
+			counter++;
+			
+		}
+		return findNthTime(str,counter-2);  // replace this
 	}
 
 	public static void main(String[] args) {

@@ -15,12 +15,11 @@ public class ForLoops {
         return sum;
     }
     public void printSquaresBack(int n){
+        int sq=1;
         for(int i=n;i>0;i--){
-            int sq=1;
             sq=i*i;
             System.out.print(sq+" ");
         }
-        System.out.println();
     }
     public void sillyNumbers(){
         for(int a=0;a<3;a++){   
@@ -38,31 +37,46 @@ public class ForLoops {
             }
             System.out.println();
         }
+
     }
-    public void dollarsAndStars(){
-        for(int h=0; h<7; h++){ 
-            for(int a=0;a<h;a++){
-                System.out.print("**");
-            }
-            for(int x=7;x>h;x--){
-                System.out.print("$");
-            }
-            for(int b=7;b>h;b--){
-                System.out.print("**");
-            }
-            for(int y=7;y>h;y--){
-                System.out.print("$");
-            }
-            for(int c=0;c<h;c++){
-                System.out.print("**");
+    public void sillyNumbers3(){
+        for(int i=0; i<=9;i++){
+            for(int j=1;j<i;j++){
+                System.out.print(j);
             }
             System.out.println();
         }
     }
+    
+    public void dollarsAndStars(){
+        for(int h=1;h<=4;h++){
+            for(int i=0;i<28;i++){
+            System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public void square(int x){
+        for(int i=1;i<=x;i++){
+            for(int j=i;j<=x;j++){
+                System.out.print(j);
+            }
+        
+
+            for(int k=1;k<i;k++){
+                System.out.print(k);
+            }
+            
+        System.out.println(" ");
+        }          
+    }
+
+
+
     public static void main(String [] args){
         ForLoops f=new ForLoops();
 
-        System.out.println("Add Evens");
+        System.out.println("Add Evns");
         System.out.println(f.addEvens(8));
         System.out.println(f.addEvens(9));
         System.out.println(f.addEvens(5));
@@ -72,7 +86,7 @@ public class ForLoops {
         f.printSquaresBack(8);
         f.printSquaresBack(3);
         f.printSquaresBack(6);
-        System.out.println("");
+        System.out.println(" ");
 
         System.out.println("Silly Numbers");
         f.sillyNumbers();
@@ -80,12 +94,11 @@ public class ForLoops {
 
         System.out.println("Silly Numbers 2");
         f.sillyNumbers2();
+        f.sillyNumbers3();
         System.out.println(" ");
+       
+        f.square(7);
+        }
 
-        System.out.println("Dollars and Stars");
-        f.dollarsAndStars();
     }
-}
-
-    
 
