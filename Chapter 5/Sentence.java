@@ -1,24 +1,12 @@
 public class Sentence {
-
 	private String currSent;
-
-	/** Constructs a new Sentence object. */
+	
 	public Sentence(String p) {
 		currSent = p;
 	}
-
-	/** Returns a string containing the current sentence. */
 	public String toString() {
 		return currSent;
 	}
-	
-
-
-	/** Returns the index of the nth occurrence of str in the current sentence;
-	 * returns -1 of the nth occurrence does not exist.
-	 * Precondition:  str.length() > 0 and n > 0
-	 * Postcondition: the current sentence if not modified.
-	 */
 	public int findNthTime(String str, int n) {
 		int a=0;
 		for(int i=0;i<n;i++){
@@ -29,22 +17,10 @@ public class Sentence {
 		}
 		return a;
 	}
-
-	/** Modifies the current sentence by replacing the nth occurrence of str with repl
-	 * If the nth occurrence does not exist, the current sentence is unchanged.
-	 * Precondition: str.length() > 0 and n > 0
-	 *
-	 */
 	public void replaceNthTime(String str, int n, String repl) {
 		int a=findNthTime(str, n);
 		if(a!=-1) currSent=currSent.substring(0,a)+repl+currSent.substring(a+str.length());
 	}
-
-	/** Returns the index of the last occurrence of str in the current sentence:
-	 * returns -1 if str is not found.
-	 * Precondition:  str.length() > 0
-	 * Postcondition: the current sentence is not modified.
-	 */
 	public int findLastTime(String str) {
 		int a=1;
 		int counter=1;
@@ -54,7 +30,7 @@ public class Sentence {
 			counter++;
 			
 		}
-		return findNthTime(str,counter-2);  // replace this
+		return findNthTime(str,counter-2);  
 	}
 
 	public static void main(String[] args) {

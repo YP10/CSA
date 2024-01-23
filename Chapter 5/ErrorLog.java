@@ -1,33 +1,26 @@
 public class ErrorLog {
-
         private String machineId;
         private String description;
         
-        /** Precondition: message is a valid Error log entry */
         public ErrorLog(String message){
-            int colonIndexOf= message.indexOf(":");
-            machineId=message.substring(0,colonIndexOf);
-            description=message.substring(colonIndexOf+1);  
+            machineId=message.substring(0,message.indexOf(":"));
+            description=message.substring(message.indexOf(":")+1);  
         }
-    
-        /** Returns true if the description in this error log entry
-         * contains keyword; false otherwise.
-         * Postcondition: the description is unchanged
-         */
         public boolean containsKey(String keyword){
-            int a=description.indexOf(keyword);
+            String desc=getDescription();
+            int a=desc.indexOf(keyword);
             int b=keyword.length();
-            int c=description.length();
+            int c=desc.length();
             if(a==-1) return false;
             if(a==0) return true;
             
             if(a+b==c){
-                String t=description.substring(a-1);
+                String t=desc.substring(a-1);
                 String t1=t.trim();
                 if(t1.length()+1==t.length()) return true;
             }
             else if(a>0){
-                String s=description.substring(a-1,a+b+1);
+                String s=desc.substring(a-1,a+b+1);
                 String s1=s.trim();
                 if(s1.length()+2==s.length()) return true;
             }
@@ -54,8 +47,5 @@ public class ErrorLog {
             System.out.println("message 6 " + er6.containsKey("disk"));
             System.out.println("message 6 " + er6.containsKey("error"));
             System.out.println("message 7 " + er7.containsKey("disk"));
-            
-    
         }
-    
     }
