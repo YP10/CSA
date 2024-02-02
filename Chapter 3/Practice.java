@@ -30,7 +30,7 @@ public class Practice {
         else return 0;
     }
     public static void main(String [] args){
-        Practice l= new Practice();
+        Practice1 l= new Practice1();
 
         System.out.println(l.loneSum(1,2,3));
         System.out.println(l.loneSum(3,2,3));
