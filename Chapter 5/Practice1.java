@@ -93,7 +93,15 @@ public class Practice1 {
         }
         return b;
      }
-    
+    public static void order(int n){
+        int newN=n;
+        while(newN>0){
+            int a=newN%10;
+            System.out.print(a);
+            newN/=10;
+
+        }
+    }
     public static void main(String []args){
         System.out.println(scroll("Hello World"));
         System.out.println(scroll("happy"));
@@ -121,6 +129,8 @@ public class Practice1 {
         printBackward("how are you doing?");
         System.out.println();
         printBackward0("hello there!");
+        System.out.println();
+        order(798563088);
 
 
     }
