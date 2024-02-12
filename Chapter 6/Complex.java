@@ -37,10 +37,13 @@ public class Complex{
         Complex b=new Complex(2,4);
         Complex b1=new Complex(-7,-5);
 
-        Complex c1=new Complex(-3);
-        Complex c2=new Complex(0,5);
+        Complex c=new Complex(-3);
+        Complex c1=new Complex(0,5);
 
-        System.out.println("1: "+a+a1+"; Add: "+a.add(a1)+"; Multiply: "+a.multiply(a1));
+        System.out.println("1: "+a+"; "+a1+"; Add: "+a.add(a1)+"; Multiply: "+a.multiply(a1));
+        System.out.println("1: "+b+"; "+b1+"; Add: "+b.add(b1)+"; Multiply: "+b.multiply(b1));
+        System.out.println("1: "+c+"; "+c1+"; Add: "+c.add(c1)+"; Multiply: "+c.multiply(c1));
+        System.out.println("1: "+a+"; "+a1+"; Add: "+a.add(a1)+"; Multiply: "+a.multiply(a1));
 
         
        
