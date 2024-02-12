@@ -31,13 +31,19 @@ public class Complex{
         return new Complex((a*Amultiply+Bmultiply*b*-1),(Amultiply*b+Bmultiply*a));
     }
     public static void main(String []args){
-        Complex c=new Complex(2,4);
-        Complex c1=new Complex(3,5);
-        System.out.println(c.abs());
-        System.out.println(c.add(c1));
-        System.out.println(c.multiply(c1));
-        System.out.println(c.add(4.0,5.0));
-        System.out.println(c.multiply(3,5));
+        Complex a=new Complex(3,-6);
+        Complex a1=new Complex(-1,9);
+
+        Complex b=new Complex(2,4);
+        Complex b1=new Complex(-7,-5);
+
+        Complex c1=new Complex(-3);
+        Complex c2=new Complex(0,5);
+
+        System.out.println("1: "+a+a1+"; Add: "+a.add(a1)+"; Multiply: "+a.multiply(a1));
+
+        
+       
     }
 
 }
