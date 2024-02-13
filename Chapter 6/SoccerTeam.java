@@ -65,8 +65,13 @@ public class SoccerTeam {
         System.out.println("Number of Games: "+getNumGames());
         System.out.println("Number of Goals: "+getNumGoals());
         s.reset();
-        System.out.println();
+        s1.reset();
+        s2.reset();
+        s3.reset();
 
+        System.out.println();
+        
+        s.startTournament();
         System.out.println("Tournament 2");
         s.played(s1,3,3);
         s2.played(s3,1,4);

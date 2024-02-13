@@ -21,7 +21,7 @@ public class Complex{
         return a+" "+"+"+" "+b+"i";
     }
     public Complex multiply(Complex other){
-        return new Complex((a*other.a+b*other.b*-1),(b*other.a+a*other.b));
+        return new Complex((a*other.a-b*other.b),(b*other.a+a*other.b));
     }
     public Complex add(double Aplus, double Bplus){
         return new Complex(a+Aplus, b+Bplus);
@@ -40,10 +40,16 @@ public class Complex{
         Complex c=new Complex(-3);
         Complex c1=new Complex(0,5);
 
-        System.out.println("1: "+a+"; "+a1+"; Add: "+a.add(a1)+"; Multiply: "+a.multiply(a1));
-        System.out.println("1: "+b+"; "+b1+"; Add: "+b.add(b1)+"; Multiply: "+b.multiply(b1));
-        System.out.println("1: "+c+"; "+c1+"; Add: "+c.add(c1)+"; Multiply: "+c.multiply(c1));
-        System.out.println("1: "+a+"; "+a1+"; Add: "+a.add(a1)+"; Multiply: "+a.multiply(a1));
+        System.out.println(a+", "+a1+"; Add: "+a.add(a1)+"; Multiply: "+a.multiply(a1));
+        System.out.println(b+", "+b1+"; Add: "+b.add(b1)+"; Multiply: "+b.multiply(b1));
+        System.out.println(c+", "+c1+"; Add: "+c.add(c1)+"; Multiply: "+c.multiply(c1));
+        System.out.println(a+"; Abs: "+a.abs());
+        System.out.println(a1+"; Abs: "+a1.abs());
+        System.out.println(b+"; Abs: "+b.abs());
+        System.out.println(b1+"; Abs: "+b1.abs());
+        System.out.println(c+"; Abs: "+c.abs());
+        System.out.println(c1+"; Abs: "+c1.abs());
+
 
         
        
