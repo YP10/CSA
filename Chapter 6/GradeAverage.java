@@ -45,14 +45,12 @@ public class GradeAverage {
 	// average of the elements in scores with indexes greater than or
 	// equal to scores.length()/2
 	public double finalGrade(){
-		double mean=0;
+		int length=scores.length;
 		if(showsImprovement()==true){
-			for(int i=0;i<scores.length;i++){
-				mean+=scores[i];
-			}
-			return mean/scores.length;
+			int index=length/2;
+			return mean(index,length-1);
 		}
-
+		else return mean(0,length-1);
 	}
 	public static void main(String[] args) {
 		int [] s1 = {50,50,20,80,53};   // not improved, finalGrade is 50.6
