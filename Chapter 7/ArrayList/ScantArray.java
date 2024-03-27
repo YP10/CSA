@@ -45,14 +45,15 @@ public class ScantArray {
      *                0 <= col < getNumColumns()
      */
     public int getValueAt(int row, int col){
-        
-        
-        return ScantArray.getValue(row, col);
-        
-		
-		
-        return 0;    // replace this
+        for(int i=0;i<entries.size();i++){
+            ScantArrayEntry x=entries.get(i);
+            if(x.getRow()==row&&x.getColumn()==col){ 
+                return x.getValue();
+            }
+        }
+        return 0; 
     }
+
 
     /** Removes a column from the scant array and shifts
      * columns to the right of col one column to the left.
@@ -61,13 +62,25 @@ public class ScantArray {
      * Precondition:  0 <= col < getNumColumns()
      */
     public void removeColumn(int col){
-        
+        for(int i=0;i<entries.size();i++){
+            ScantArrayEntry x=entries.get(i);
+            if(x.getColumn()==col){
+                entries.remove(i);
+            }
+            if(x.getColumn()>col){
+                entries.remove(i);
+                entries.add(new ScantArrayEntry(x.getRow(), x.getColumn()-1,x.getValue()));
+            }
+        }
+
+
+
         /* part b */
         
 		
-		
-		
     }
+		
+
 
     /** Allows the ScantArray to be printed.  The
      * result should look like a 2D array.  Entries
@@ -79,14 +92,18 @@ public class ScantArray {
      * @return
      */
     public String toString(){
-        /* part c */
         String s = "";
-
-        
-		
-		
+        for(int i = 0; i < numRows; i++){
+            for(int j = 0; j < numColumns; j++){
+                s += getValueAt(i, j) + " ";
+            }
+            s += "\n";
+        }
         return s;
     }
+    
+        
+    
 
     public static void main(String[] args){
         ScantArray sa1 = new ScantArray(4,5);
