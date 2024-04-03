@@ -1,49 +1,27 @@
 package ArrayList;
 import java.util.ArrayList;
 
-/*
-The ScantArray class represents a 2D array with few non-zero
-entries.  It contains a list of ScantArrayEntry objects, each
-of which represents one of the non-zero elements in the array.
-The entries representing the non-zero elements are stored in the
-list in no particular order.  Each non-zero element is represented
-by exactly one entry in the list.
- */
+
 
 public class ScantArray {
-    /** number of rows and columns in the list */
     private int numRows;
     private int numColumns;
 
-    /** The list of entries representing the non-zero elements of
-     * the scant array.  Entries are stored in no particular order.
-     */
     private ArrayList<ScantArrayEntry> entries;
 
-    /** constructor */
     public ScantArray(int r, int c){
         numRows = r;
         numColumns = c;
         entries = new ArrayList<ScantArrayEntry>();
     }
 
-    /** Accessors - return the number or rows/columns in the array*/
     public int getNumRows(){return numRows;}
     public int getNumColumns(){return numColumns;}
 
-    /** Adds a new entry to the array */
     public void addEntry(int row, int col, int val){
         entries.add(new ScantArrayEntry(row, col, val));
     }
 
-    /** Returns the value of the element at position (row, column)
-     * in the sparse array
-     * @param row
-     * @param col
-     * @return   the value in the array
-     * Precondition:  0 <= row < getNumRows()
-     *                0 <= col < getNumColumns()
-     */
     public int getValueAt(int row, int col){
         for(int i=0;i<entries.size();i++){
             ScantArrayEntry x=entries.get(i);
@@ -54,13 +32,6 @@ public class ScantArray {
         return 0; 
     }
 
-
-    /** Removes a column from the scant array and shifts
-     * columns to the right of col one column to the left.
-     * (see description in word doc.
-     * @param col
-     * Precondition:  0 <= col < getNumColumns()
-     */
     public void removeColumn(int col){
         
         for(int i=entries.size()-1;i>=0;i--){
@@ -77,18 +48,7 @@ public class ScantArray {
         }
         numColumns--;
     }
-		
 
-
-    /** Allows the ScantArray to be printed.  The
-     * result should look like a 2D array.  Entries
-     * not represented should display 0.  Ex:
-     * 0 0 3 0 2
-     * 1 0 0 0 0
-     * 0 0 3 4 0
-     *
-     * @return
-     */
     public String toString(){
         String s = "";
         for(int i = 0; i < numRows; i++){
@@ -139,11 +99,5 @@ public class ScantArray {
 
         sa2.removeColumn(3);
         System.out.println(sa2);
-
-
-
-        
-
-        /******* please add one more test of your own *******/
     }
 }
