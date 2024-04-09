@@ -5,16 +5,13 @@ public class Limerick extends Poem {
     }
 
     public int getSyllables(int k){
-        if(getNumLines()==2||getNumLines()%2!=0){
-            k=9;
-        }
-        else{
-            k=6;
-        }
-        return k;
+        if(k<=2||k==5) return 9;
+        else return 6;
     }
 
     public void printRhythm(){
-
+       for(int i=1;i<=getNumLines();i++){
+            specialRhythm(getSyllables(i));
+        }
     }
 }

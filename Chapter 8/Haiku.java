@@ -4,18 +4,14 @@ public class Haiku extends Poem {
         super(3);
     }
     public int getSyllables(int k){
-        if(getNumLines()%2==0) k=7;
-        else{
-            k=5;
-        }
-        return k;
+        if(k%2==0) return 7;
+        else return 5;
     }
     public void printRhythm(){
-        for(int i=0;i<getNumLines();i++){
-            for(int j=0;j<getSyllables();j++){
-                System.out.println("ta");
-            }
-        System.out.println();
-        }
+        for(int i=1;i<=getNumLines();i++){
+            specialRhythm(getSyllables(i));
+       }
     }
 }
+    
+   
