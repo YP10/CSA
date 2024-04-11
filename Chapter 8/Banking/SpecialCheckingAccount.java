@@ -1,13 +1,13 @@
 public class SpecialCheckingAccount extends CheckingAccount {
     private double minBal;
     private double apr;
-    public SpecialCheckingAccount(int idNumber, double minimumBalance, double startBal, double interestRate, double checkCharge){
+    public SpecialCheckingAccount(int idNumber, double startBal, double checkCharge, double interestRate,double minimumBalance){
         super(idNumber,startBal,checkCharge);
         minBal=minimumBalance;
         apr=interestRate;
     }
     public void clearCheck(double amount){
-        if(currentBalance()<minBal){
+        if(currentBalance()>minBal){
             decreaseBalance(amount);
         }
         else{
